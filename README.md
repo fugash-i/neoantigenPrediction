@@ -2,8 +2,9 @@
 Predicting splice-neoantigens (induced by chemical treatment or mutation of splicing factor) from RNA-seq data using rMATS and NetMHCPan. 
 
 ## 概要
-sraファイル(1でダウンロード)をBAMに変換, ソートし(2)たのちにrMATSを用いてASEを検出, FDR, incLevelDifference, TPMでフィルタリングした上でタンパク質配列に翻訳(3), netMHCpanで特定のMHC class Iに提示されると予測されるアミノ酸配列予測を出力する(3).  
-(3)のプロセスはやや時間がかかる上複雑になるため3-1~3-3のコードを順に用いても同様のことができるようになっている. 
+sraファイル(1でダウンロード)をBAMに変換, Hisat2でソートし(2)たのちにrMATSを用いてASEを検出, FDR, incLevelDifference, TPMでフィルタリングした上でタンパク質配列に翻訳(3), netMHCpanで特定のMHC class Iに提示されると予測されるアミノ酸配列予測を出力する(3).  
+(3)のプロセスはやや時間がかかる上複雑になるため3-1~3-3のコードを順に用いても同様のことができるようになっている.  
+このワークフローではannotated variantsについて分析の対象にしているが, もしnon-annotated variantsについて予測したい場合はTrinityなどRNA-seqのde novo assemblyツールを試すといいかも.  
 
 ## config.yamlについて
 入力/出力ファイルのディレクトリ, HISAT2/rMATS/netMHCpanのオプションなどを設定する. 詳しくは当該ファイルのコメントを参照. 
