@@ -1,0 +1,45 @@
+# config.yaml
+
+# パス設定
+paths:
+  fastq_dir: "" # RNA-seqの生データ(fastq)のパス
+  mapping_output_dir: "" # マッピング結果が保存されるディレクトリ
+  hisat2_index_path: "" # HISAT2のインデックス(ディレクトリとプレフィックス"genome")
+  b1_file: "" # b1群(vehicle/control群)の情報(BAMファイルのディレクトリ)を書いたテキスト. 区切りは,(スペースなし). 
+  b2_file: "" # b2群(treatment)の情報
+  gtf_file: "" # gtfファイルのパス
+  genome_fasta: "" # 参照ゲノムのファスタファイルのパス
+  base_dir: "" # rmatsのtempファイル/resultファイルや、途中経過でできたファイルなどを保存するディレクトリ
+  netmhcpan_executable: "" # netMHCpanのディレクトリ
+  all_bam_files_dir: 
+    - '' # bamファイルのディレクトリ(箇条書き)
+
+sample_groups:
+  vehicle:
+    - ''
+  treatment:
+    - ''
+  
+
+# パラメータ設定
+params:
+  hisat2: 
+    threads:  # 使用するCPUコア数(物理コア数-1or2くらい)
+
+  rmats:
+    read_type: "" # paired or single
+    read_length:  # ran-seqのリード長
+    n_threads:  # 使用するCPUコア数(コア数-1or2くらい)
+    lib_type: "" # 読んでいる鎖の指定
+
+  netmhcpan:
+    hla_alleles: "" # 予想に使うHLAのアレル(ex: HLA-A02:01 for HLA-A*02:01)
+    peptide_lengths: "" # 予想に使うペプチド長(ex: "8,9,10,11")
+
+# フィルタリング閾値
+thresholds:
+  fdr: 
+  inc_level_diff:  # Matsushima 2022はPSI>=5.0
+  rank_el: 
+  tpm: 
+
