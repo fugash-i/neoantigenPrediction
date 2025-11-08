@@ -6,6 +6,7 @@ sraファイル(1でダウンロード)をBAMに変換, Hisat2でソートし(2)
 (3)のプロセスはやや時間がかかる上複雑になるため3-1~3-3のコードを順に用いても同様のことができるようになっている.  
 このワークフローではannotated variantsについて分析の対象にしているが, もしnon-annotated variantsについて予測したい場合はTrinityなどRNA-seqのde novo assemblyツールを試すといいかも.  
 
+- [Hisat2](https://daehwankimlab.github.io/hisat2/)
 - [rMATS](https://rnaseq-mats.sourceforge.io/)
 - [netMHCpan](https://github.com/tzina97/netMHCpan)
 - [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
