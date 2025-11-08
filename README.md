@@ -8,6 +8,7 @@ sraファイル(1でダウンロード)をBAMに変換, Hisat2でソートし(2)
 
 - [rMATS](https://rnaseq-mats.sourceforge.io/)
 - [netMHCpan](https://github.com/tzina97/netMHCpan)
+- [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
 
 ## config.yamlについて
 入力/出力ファイルのディレクトリ, HISAT2/rMATS/netMHCpanのオプションなどを設定する. 詳しくは当該ファイルのコメントを参照. 
